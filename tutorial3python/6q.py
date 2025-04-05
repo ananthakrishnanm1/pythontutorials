@@ -1,0 +1,15 @@
+import tkinter as tk
+def convert_to_uppercase():
+    result = input_entry.get().upper()
+    result_label.config(text="Uppercase: " + result)
+window = tk.Tk()
+window.title("Uppercase Converter")
+input_label = tk.Label(window, text="Enter String:")
+input_label.pack()
+input_entry = tk.Entry(window)
+input_entry.pack()
+convert_button = tk.Button(window, text="Convert", command=convert_to_uppercase)
+convert_button.pack()
+result_label = tk.Label(window, text="Uppercase: ")
+result_label.pack()
+window.mainloop()
